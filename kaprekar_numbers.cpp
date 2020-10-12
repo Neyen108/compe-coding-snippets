@@ -39,7 +39,7 @@ void kaprekarNumbers(int p, int q)
             cout << i << " ";
         }
 
-        // if no kaprekar numbers
+        // if no kaprekar numbers are found
         if(flag == 0)
         {
             cout << "INVALID RANGE";
