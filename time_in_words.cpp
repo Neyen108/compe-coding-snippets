@@ -118,7 +118,7 @@ void timeInWords(int h, int m)
                 min = tens[m - 10];
             }
         }
-        
+
         else if(m >= 20)
         {
             if(m==20)
@@ -156,9 +156,6 @@ int main()
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     timeInWords(h, m);
-
-    
-    
 
     return 0;
 }
