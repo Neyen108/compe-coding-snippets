@@ -38,12 +38,11 @@ void kaprekarNumbers(int p, int q)
             flag = 1;
             cout << i << " ";
         }
-
-        // if no kaprekar numbers are found
-        if(flag == 0)
-        {
-            cout << "INVALID RANGE";
-        }
+    }
+     // if no kaprekar numbers are found
+    if(flag == 0)
+    {
+        cout << "INVALID RANGE";
     }
 }
 
