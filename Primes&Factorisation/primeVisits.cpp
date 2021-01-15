@@ -35,17 +35,17 @@ int main()
 
     primeSeive(p);
 
-    int a, b;
-    cin >> a >> b;
-
-    int cumulativeSum[b + 1];
+    int cumulativeSum[1000000];
 
     cumulativeSum[0] = 0;
 
-    for (int i = 1; i <= b; i++)
+    for (int i = 1; i < 1000000; i++)
     {
         cumulativeSum[i] = cumulativeSum[i - 1] + p[i];
     }
+
+    int a, b;
+    cin >> a >> b;
 
     cout << cumulativeSum[b] - cumulativeSum[a - 1];
 }
