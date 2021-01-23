@@ -17,24 +17,33 @@ void generateStrings(char *input, char *output, int i, int j)
 
     //only one number
     int firstNo = input[i] - '0';
-    char c = firstNo + 'A' - 1; //converting the number to character
-    output[j] = c;
-    //call recursion on the remaining part
-    generateStrings(input, output, i + 1, j + 1);
-
-    //considering two digits
-    if (input[i + 1] != '\0')
+    //if first number is 0, skip it
+    if (firstNo == 0)
     {
-        int secondNo = input[i + 1] - '0';
-        int number = (firstNo * 10) + secondNo;
-        if (number <= 26)
+        generateStrings(input, output, i + 1, j);
+    }
+    else
+    {
+        char c = firstNo + 'A' - 1; //converting the number to character
+        output[j] = c;
+        //call recursion on the remaining part
+        generateStrings(input, output, i + 1, j + 1);
+
+        //considering two digits
+        if (input[i + 1] != '\0')
         {
-            char d = number + 'A' - 1;
-            output[j] = d;
-            generateStrings(input, output, i + 2, j + 1);
+            int secondNo = input[i + 1] - '0';
+            int number = (firstNo * 10) + secondNo;
+            if (number <= 26)
+            {
+                char d = number + 'A' - 1;
+                output[j] = d;
+                generateStrings(input, output, i + 2, j + 1);
+            }
         }
     }
-    return;
+
+        return;
 }
 
 int main()
