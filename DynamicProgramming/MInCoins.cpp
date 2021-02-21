@@ -13,6 +13,7 @@ int minCoinsTopDown(int amount, int coins[], int *dp)
     }
 
     //dp array
+    //LOOKUP
     if (dp[amount] != 0)
     {
         return dp[amount];
