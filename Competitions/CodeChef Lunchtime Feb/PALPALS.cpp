@@ -20,12 +20,14 @@ int main()
             continue;
         }
 
+        //get the frequency
         for (int i = 0; i < n; i++)
         {
             int c = s[i] - 'a';
             count[c]++;
         }
 
+        //calculate the single charaters
         int odd_count = 0;
 
         for (int i = 0; i < 26; i++)
